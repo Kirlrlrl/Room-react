@@ -70,7 +70,7 @@ body {
     left: 0;
     width: 32px;
     height: 32px;
-    background-image: url("/images/favicomatic/favicon-32x32.png");
+    background-image: url("/public/images/favicomatic/favicon-32x32.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
