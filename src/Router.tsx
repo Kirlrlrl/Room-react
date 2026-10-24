@@ -1,5 +1,5 @@
 
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import App from './App';
 import StartPage from './pages/StartPage';
 import CorridorPage from './pages/CorridorPage';
@@ -17,7 +17,7 @@ import BackhomePage from "./pages/BackhomePage";
 
 function Router() {
     return (
-        <BrowserRouter basename="/Room-react">
+        <HashRouter basename="/Room-react">
             <Routes>
                 <Route path="/" element={<App />} />
                 <Route path="/start" element={<StartPage />} />
@@ -34,7 +34,7 @@ function Router() {
                 <Route path="/electrup" element={<ElectrupPage />} />
                 <Route path="/backhome" element={<BackhomePage />} />
             </Routes>
-        </BrowserRouter>
+        </HashRouter>
     );
 }
 
