@@ -53,7 +53,7 @@ export default function InsidePage() {
             </div>
 
             <div className="inside-gallery">
-                <img src="/images/caterpillar.png" alt="" />
+                <img src={`${import.meta.env.BASE_URL}images/caterpillar.png`} alt="" />
             </div>
 
             <div
