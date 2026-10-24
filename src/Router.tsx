@@ -17,7 +17,7 @@ import BackhomePage from "./pages/BackhomePage";
 
 function Router() {
     return (
-        <HashRouter basename="/Room-react">
+        <HashRouter>
             <Routes>
                 <Route path="/" element={<App />} />
                 <Route path="/start" element={<StartPage />} />
