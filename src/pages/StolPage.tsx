@@ -44,7 +44,8 @@ export default function StolPage() {
                 <img
                     id="char"
                     className="character"
-                    src={countChar >= 2 ? "/images/apple2r.png" : "/images/appletr34.png"}
+                    src={countChar >= 2 ? `${import.meta.env.BASE_URL}images/apple2r.png`
+        : `${import.meta.env.BASE_URL}images/appletr34.png`}
                     alt=""
                     onClick={handleCharacterClick}
                     draggable={false}
