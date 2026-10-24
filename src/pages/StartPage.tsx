@@ -58,6 +58,11 @@ function StartPage() {
                             link.key === 'table' ? !isUnlocked : undefined
                         }
                         onClick={(event) => {
+                            if (link.href === '#') {
+                                event.preventDefault();
+                                return;
+                            }
+
                             if (link.key === 'table' && !isUnlocked) {
                                 event.preventDefault();
                             }
