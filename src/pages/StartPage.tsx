@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import './StartPage.css';
+import { Link } from 'react-router-dom';
 
 function StartPage() {
     const [isUnlocked, setIsUnlocked] = useState(false);
@@ -50,9 +51,9 @@ function StartPage() {
         <div className="game-page">
             <div className="game-container">
                 {roomLinks.map((link) => (
-                    <a
+                    <Link
                         key={link.key}
-                        href={link.href}
+                        to={link.href}
                         aria-disabled={
                             link.key === 'table' ? !isUnlocked : undefined
                         }
@@ -63,7 +64,7 @@ function StartPage() {
                         }}
                     >
                         {link.text}
-                    </a>
+                    </Link>
                 ))}
             </div>
 
