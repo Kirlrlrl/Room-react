@@ -53,7 +53,7 @@ export default function InsidePage() {
             </div>
 
             <div className="inside-gallery">
-                <img src="/public/images/caterpillar.png" alt="" />
+                <img src="/images/caterpillar.png" alt="" />
             </div>
 
             <div
