@@ -1,0 +1,120 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.game-page {
+
+
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 720px;
+    height: 914px;
+    max-width: 100vw;
+    flex-shrink: 0;
+
+    background-image: url('/public/images/kitchen-hallwayr.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(3, auto);
+    width: 100%;
+    height: 100%;
+    justify-items: center;
+    text-align: center;
+    align-items: center;
+    padding-top: 200px;
+}
+
+.game-container a {
+    font-size: 5vh;
+    text-decoration: none;
+    color: transparent;
+}
+
+.game-container a:visited {
+    color: white;
+}
+
+@media screen and (max-width: 600px) {
+    .game-container a,
+    a:visited {
+        color: white;
+    }
+}
+
+.game-container a:hover {
+    color: rgb(225, 239, 239);
+}
+
+.game-container a[aria-disabled='true'] {
+    cursor: default;
+}
+
+.game-message {
+    color: #faa5a5;
+    font-size: 300%;
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1000;
+}
+
+.game-message.show {
+    animation: game-fade-in 5s ease forwards;
+}
+
+@keyframes game-fade-in {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@media (max-width: 720px) {
+    .game-page {
+        height: auto;
+        aspect-ratio: 720 / 914;
+        margin-top: 20vh;
+
+    }
+
+    .game-container {
+        padding-top: 22%;
+    }
+
+    .game-container a {
+        font-size: clamp(16px, 5vw, 36px);
+    }
+
+    .game-message {
+        width: 90%;
+        font-size: clamp(20px, 7vw, 36px);
+    }
+}

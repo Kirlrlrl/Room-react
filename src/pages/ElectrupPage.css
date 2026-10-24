@@ -1,0 +1,151 @@
+
+.electrup-page,
+.electrup-page * {
+    box-sizing: border-box;
+}
+
+.electrup-page {
+    background-image: url("/public/images/electrup.png");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-color: black;
+    background-size: auto;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.electrup-container {
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+    flex-shrink: 0;
+}
+
+.electrup-pyramid {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 50px auto;
+    transform-style: preserve-3d;
+    animation: electrup-rotate 20s linear infinite;
+}
+
+.electrup-page .electrup-base {
+    opacity: 0.4;
+    position: absolute;
+    top: 200px;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    transform: rotateX(90deg);
+    background: #0a638f;
+}
+
+.electrup-exit-link {
+    text-decoration: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    z-index: 2;
+    white-space: nowrap;
+}
+
+.electrup-exit-link:visited {
+    color: white;
+}
+
+.electrup-exit-link:hover {
+    color: powderblue;
+}
+
+.electrup-side {
+    opacity: 0.7;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 300px;
+    clip-path: polygon(50% 0, 0 100%, 100% 100%);
+    transform-origin: 50% 100%;
+    backface-visibility: visible;
+}
+
+.electrup-one {
+    background: #9cdcfe;
+    transform: translateZ(100px) rotateX(19.5deg);
+}
+
+.electrup-two {
+    background: #61cdff;
+    transform: translateZ(-100px) rotateX(-19.5deg);
+}
+
+.electrup-three {
+    background: #41c2ff;
+    transform: translateX(100px) rotateY(90deg) rotateX(19.5deg);
+}
+
+.electrup-four {
+    background: #00a2ff;
+    transform: translateX(-100px) rotateY(-90deg) rotateX(19.5deg);
+}
+
+.electrup-odna,
+.electrup-dva,
+.electrup-tri {
+    text-decoration: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    z-index: 2;
+    white-space: nowrap;
+}
+
+.electrup-odna {
+    top: 20%;
+    transform: translate(-50%, -50%);
+}
+
+.electrup-dva {
+    transform: translate(-50%, -50%) scale(-1, 1);
+}
+
+.electrup-tri {
+    transform: translate(-50%, -50%);
+}
+
+@keyframes electrup-rotate {
+    0% {
+        transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg);
+    }
+
+    50% {
+        transform: rotateY(180deg) rotateX(-30deg) rotateZ(-30deg);
+    }
+
+    100% {
+        transform: rotateY(360deg) rotateX(0deg) rotateZ(0deg);
+    }
+}
+
+@media (max-width: 480px) {
+    .electrup-container {
+        transform: scale(0.8);
+    }
+}

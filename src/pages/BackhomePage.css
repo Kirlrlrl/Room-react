@@ -1,0 +1,59 @@
+
+.backhome-page,
+.backhome-page * {
+    box-sizing: border-box;
+}
+
+.backhome-page {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url("/images/backhome.png");
+    background-attachment: fixed;
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    background-color: black;
+}
+
+.backhome-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 20px;
+    width: 90vw;
+    min-height: 100vh;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.backhome-link:link {
+    color: transparent;
+}
+
+
+@media screen and (max-width: 600px) {
+    .backhome-link:link,
+    .backhome-link:visited {
+        color: white;
+    }
+}
+
+.backhome-link:visited {
+    color: white;
+}
+
+.backhome-link:hover {
+    color: white;
+}
+
+.backhome-link {
+    font-size: 200%;
+    text-decoration: none;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}

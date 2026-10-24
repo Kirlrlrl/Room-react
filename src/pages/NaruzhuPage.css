@@ -1,0 +1,84 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.naruzhu-page {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background-image: url("/public/images/way.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: black;
+}
+
+.naruzhu-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.naruzhu-link:link {
+    color: transparent;
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .naruzhu-link:link,
+    .naruzhu-link:visited {
+        color: powderblue;
+    }
+}
+
+
+.naruzhu-link:visited {
+    color: powderblue;
+}
+
+.naruzhu-link:hover {
+    color: powderblue;
+}
+
+.naruzhu-link {
+    font-size: 200%;
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.naruzhu-message {
+    color: powderblue;
+    font-size: 200%;
+    z-index: 1000;
+    animation: naruzhuFadeIn 6s ease forwards;
+    position: absolute;
+    top: 70%;
+    left: 30%;
+}
+
+@keyframes naruzhuFadeIn {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .naruzhu-message {
+        left: 8%;
+        right: 8%;
+        font-size: 130%;
+    }
+}

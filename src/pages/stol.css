@@ -1,0 +1,113 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body,
+#root {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    background-color: black;
+    cursor: none;
+}
+
+.page {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: black;
+}
+
+.container {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.container img {
+    width: 50%;
+    height: auto;
+    display: block;
+    z-index: 1;
+    user-select: none;
+}
+
+.character {
+    cursor: none;
+}
+
+.slot {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: end;
+    text-align: end;
+    color: red;
+    font-size: 10vh;
+    bottom: 10%;
+    right: 10%;
+    pointer-events: none;
+}
+
+.custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 32px;
+    height: 32px;
+    background-image: url("/images/favicomatic/favicon-32x32.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+}
+
+.inside-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    background-color: black;
+    color: red;
+    font-size: 200%;
+}
+
+.inside-page a {
+    color: #493a2e;
+    text-decoration: none;
+}
+
+
+
+.inside-page a:hover {
+    color: rgb(241 241 242);
+}
+
+@media (max-width: 600px) {
+    .container img {
+        width: 85%;
+    }
+
+    .slot {
+        font-size: 200%;
+    }
+}

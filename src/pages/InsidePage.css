@@ -1,0 +1,118 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+
+
+}
+
+.inside-page {
+    position: relative;
+    width: 100%;
+    min-height: 200vh;
+    background-image: url("/public/images/appleinside.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+    overflow: hidden;
+}
+
+.inside-container {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: center;
+    z-index: 1;
+}
+
+
+
+.inside-eat-link:link {
+    color: red;
+}
+
+.inside-eat-link:visited {
+    color: #ff0000;
+}
+
+.inside-eat-link:hover {
+    color: rgb(255 0 0);
+}
+
+.inside-eat-link {
+    font-size: 20vh;
+    text-decoration: none;
+}
+
+.inside-gallery {
+    position: absolute;
+    inset: 0;
+
+    justify-items: center;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    pointer-events: none;
+}
+
+.inside-gallery img {
+    width: 90vw;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    transform: translateY(-200px);
+}
+
+#screenCover {
+    position: fixed;
+    inset: 0;
+    background-color: #7c1414;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+#screenCover.active {
+    visibility: visible;
+    animation: coverScreen 1s ease forwards;
+}
+
+@keyframes coverScreen {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .inside-eat-link {
+        font-size: 10vh;
+    }
+
+    .inside-gallery img {
+        width: 100vw;
+    }
+}

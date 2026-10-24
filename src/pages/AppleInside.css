@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+
+
+}
+
+.apple-inside-page {
+    position: relative;
+    width: 100%;
+    min-height: 200vh;
+
+    background-image: url("/public/images/appleinside.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+}
+
+.apple-inside-container {
+    position: absolute;
+    inset: 0;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.eat-link:link {
+    color: transparent;
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .eat-link:link,
+    .eat-link:visited {
+        color: red;
+    }
+}
+
+.eat-link:visited {
+    color: #ff0000;
+}
+
+.eat-link:hover {
+    color: rgb(255 0 0);
+}
+
+.eat-link {
+    font-size: 1000%;
+    text-decoration: none;
+}
+
+.apple-inside-cover {
+    position: fixed;
+    inset: 0;
+
+    background-color: powderblue;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+.apple-inside-cover.active {
+    visibility: visible;
+    animation: coverScreen 1s ease forwards;
+}
+
+@keyframes coverScreen {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .eat-link {
+        font-size: 500%;
+    }
+}
