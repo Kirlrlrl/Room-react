@@ -21,15 +21,13 @@ export default function InsidePage() {
     }, []);
 
     const handleEatClick = (event: MouseEvent<HTMLAnchorElement>) => {
-        // Сохраняем поведение оригинального JavaScript:
-        // ссылка всегда блокируется и запускает переход через 3 секунды.
         event.preventDefault();
 
         const isUnlocked =
             sessionStorage.getItem("linkUnlocked") === "yes";
 
         if (!isUnlocked) {
-            // Ссылка заблокирована — всё равно запускаем затемнение.
+            
         }
 
         setCoverActive(true);
