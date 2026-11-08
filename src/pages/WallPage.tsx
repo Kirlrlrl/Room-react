@@ -25,11 +25,11 @@ function WallPage() {
   );
 
   const HOLD_WORD_IDS = ['linkT', 'linkT1'];
-  const HOLD_TIMEOUT = 3000;
+  const HOLD_TIMEOUT = 6000;
 
   useEffect(() => {
     alert('об этом было много мыслей, но можно ничего и не делать. (нажмите пальцем на экран, удерживайте' +
-        'его и водите вокруг, чтобы увидеть надписи)');
+        ' его и водите вокруг, чтобы увидеть надписи)');
 
     return () => {
       hideTimers.current.forEach((timer) => clearTimeout(timer));
