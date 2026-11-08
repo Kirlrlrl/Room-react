@@ -15,10 +15,11 @@ body{
 }
 
 .game-page {
-
-
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: auto;
+    margin-top: 3%;
+
     position: relative;
     width: 720px;
     height: 914px;
@@ -26,8 +27,11 @@ body{
     flex-shrink: 0;
 
     background-image: url('/public/images/kitchen-hallwayr.jpg');
-    background-position: center center;
+    background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
+
+
 
 
     display: flex;

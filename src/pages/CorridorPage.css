@@ -18,8 +18,9 @@ body {
 
 .corridor-page {
     background-image: url('/public/images/roomr.jpg');
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
+
     background-size: 100% 100%;
 
     width: min(100vw, 1280px);
@@ -27,6 +28,7 @@ body {
 
     margin-top: auto;
     margin-bottom: auto;
+    margin-left: 12%;
 
     display: flex;
     justify-content: center;
