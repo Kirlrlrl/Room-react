@@ -18,7 +18,9 @@ function App() {
           <p>
               <Link to="/start">Начать</Link>
           </p>
+
         </div>
+
       </div>
   );
 }
