@@ -14,6 +14,8 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .corridor-page {
@@ -21,14 +23,12 @@ body {
     background-position: center center;
     background-repeat: no-repeat;
 
-    background-size: 100% 100%;
+    background-size: contain;
 
     width: min(100vw, 1280px);
     aspect-ratio: 1280 / 913;
 
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: 12%;
+    margin: auto;
 
     display: flex;
     justify-content: center;
